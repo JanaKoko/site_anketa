@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block title %} Вопросы {% endblock %}
+
+{% block one_content %}<h1>Тут анкета</h1>
+Вам предстоит ответить на несколько ворпросов.{% endblock %}
+{% block two_content %}<h2> Это вопросы</h2>
+Они сложные.<br>
+<form action='/thanks'>
+<div class = "anketa">
+	<div class = "qu">
+		1. <i>Общая информация</i><br>
+		Согласны ли Вы пройти опрос?<br>
+		<input type="radio" name="ask" value="yes">Да
+		<br>
+		Сколько Вам лет?
+		<input type="text" name="age" placeholder="18" size = "3">
+		<br>
+		Ваш пол:
+		<select name="gender">
+			<option selected value="m">Мужской</option>
+			<option value="f">Женский</option>
+			<option value="o">Другой</option>
+		</select>
+	</div>
+	<div class = "qu">
+		2. <i>Вопросы</i><br>
+		Оцените предложение по шкале от 1 до 5,<br>
+		где 5 — <b>отличное прдложение</b>,<br>
+		1 — <b>ужасное преложение.</b><br>
+		Предложение: <i>Можете пожалуйста пройти опрос?</i><br>
+		Оценка:
+		<select name="score">
+			<option selected value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select>
+	</div>
+	<div class = "qu">
+	Выберите то, что наиболее правильно характеризует вас:<br>
+		Я...
+		<select name="me">
+			<option selected value="never">никогда так не говорю.</option>
+			<option value="seldom">иногда говорю так.</option>
+			<option value="usually">обычно говорю так.</option>
+			<option value="always">часто говорю так.</option>
+		</select>
+		<br>
+		Я...
+		<select name="me">
+			<option selected value="never">никогда не слышал(а), что так говорят.</option>
+			<option value="seldom">иногда слышу, что говорят так.</option>
+			<option value="usually">обычно слышу, что говорят так.</option>
+			<option value="always">часто слышу, что говорят так.</option>
+		</select>
+	</div>
+	<div class = "qu">
+		Знаете ли вы английский язык?<br>
+		<input type="radio" name="english" value="yes" checked>Да<br>
+		<input type="radio" name="english" value="no">Нет<br>
+	</div>
+</div>
+<br>
+<div style = "width: 500px; margin: 5px">
+	<input type="submit" value="Отправить">
+</div>
+</form>
+{% endblock %}
