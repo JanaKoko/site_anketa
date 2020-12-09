@@ -44,6 +44,8 @@ def stat():
         .order_by(models.People.age)\
         .limit(1)\
         .one()
+    men = db.session.query(models.People.gender)\
+        .filter(gender = 'm').count()
     my_score = db.session.query(
         func.avg(models.Answers.one)).one()
     return render_template('stats.html',
