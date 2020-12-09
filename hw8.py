@@ -44,8 +44,8 @@ def stat():
         .order_by(models.People.age)\
         .limit(1)\
         .one()
-    #men = db.session.query(models.People.gender)\
-        #.filter(models.People.gender = 'm').count()
+    men = db.session.query(models.People.gender)\
+        .filter(models.People.gender = 'm').count()
     my_score = db.session.query(
         func.avg(models.Answers.one)).one()
     return render_template('stats.html',
@@ -53,7 +53,7 @@ def stat():
                            most_old = old[0],
                            most_young = young[0],
                            avg = round(my_score[0]),
-                           men = 2)
+                           men = men)
 
 
 # In[5]:
