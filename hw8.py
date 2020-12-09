@@ -50,7 +50,7 @@ def stat():
                            how_many = many,
                            most_old = old[0],
                            most_young = young[0],
-                           avg = type(my_score[0]))
+                           avg = round(my_score[0]))
 
 
 # In[5]:
