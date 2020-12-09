@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %} Статистика {% endblock %}
+
+{% block one_content %}<h1>Тут статистика</h1>
+<div class = "stats">
+	<i>Вего опрос прошло </i> {{how_many}} человек.
+	<br>
+	<i>Самому старшему из них </i> {{most_old}} лет,
+	<br>
+	<i>cамому младшему </i> {{most_young}} лет.
+</div>
+<div class = "stats">
+<i>Средняя оценка предложения </i> {{avg}}.
+</div>
+{% endblock %}
+{% block two_content %}
+<p align="center">
+<img src = 'https://raw.githubusercontent.com/YanaKoko/try/master/graf3.png' width="600">
+<p>
+{% endblock %}
