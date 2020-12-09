@@ -52,7 +52,8 @@ def stat():
                            how_many = many,
                            most_old = old[0],
                            most_young = young[0],
-                           avg = round(my_score[0]))
+                           avg = round(my_score[0]),
+                           men = men))
 
 
 # In[5]:
